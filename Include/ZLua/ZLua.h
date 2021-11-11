@@ -6,6 +6,7 @@
 #include <string>
 #include <vector>
 #include "status.h"
+#include "vec2.h"
 #include "Shader.h"
 #include  "Mesh.h"
 #include  "Scene.h"
