@@ -1,5 +1,4 @@
 #include "World.h"
-#include "ZLua.h"
 
 void resized(GLFWwindow* window, int width, int height)
 {
@@ -40,6 +39,7 @@ int World::draw()
 	while (!glfwWindowShouldClose(glWindow))
 	{
 
+		currScene.draw();
 
 		glfwSwapBuffers(glWindow);
 		glfwPollEvents();
@@ -53,7 +53,7 @@ int World::end()
 	return 0;
 }
 
-void World::setScene(const Scene& scene)
+void World::setScene(Scene scene)
 {
 	currScene = scene;
 }

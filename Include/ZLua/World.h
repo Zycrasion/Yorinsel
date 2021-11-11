@@ -1,5 +1,5 @@
 #pragma once
-#include "ZLua.h"
+#include "Scene.h"
 
 class World
 {
@@ -13,7 +13,7 @@ public:
 	int draw();
 	int end();
 
-	void setScene(const Scene& scene);
+	void setScene(Scene scene);
 };
 
 void resized(GLFWwindow* window, int width, int height);

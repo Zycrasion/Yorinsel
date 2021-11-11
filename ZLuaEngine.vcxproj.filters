@@ -30,6 +30,9 @@
     <ClCompile Include="Include\ZLua\Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Include\ZLua\Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\ZLua\World.h">
@@ -44,5 +47,15 @@
     <ClInclude Include="Include\ZLua\Scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Include\ZLua\Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ZLua\status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Game\Shaders\vertex.glsl" />
+    <None Include="Game\Shaders\fragment.glsl" />
   </ItemGroup>
 </Project>
