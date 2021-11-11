@@ -12,6 +12,18 @@ Scene::Scene()
 	DebugMode = false;
 }
 
+void Scene::copy(Scene scene)
+{
+	sceneName = scene.name();
+	DebugMode = scene.Debug();
+	Meshes = scene.Meshes;
+}
+
+std::string Scene::name()
+{
+	return sceneName;
+}
+
 bool Scene::Debug()
 {
 	return DebugMode;
@@ -21,4 +33,20 @@ bool Scene::Debug(bool DebugMode_)
 {
 	DebugMode = DebugMode_;
 	return DebugMode;
+}
+
+void Scene::add(Mesh mesh)
+{
+	Meshes.push_back(mesh);
+}
+
+void Scene::draw()
+{
+	glClearColor(0.5f, 0.1f, 0.1f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT);
+	int n = Meshes.size();
+	for (int i = 0; i < n; i++)
+	{
+		Meshes[i].draw();
+	}
 }

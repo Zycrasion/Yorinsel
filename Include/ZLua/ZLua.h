@@ -5,6 +5,8 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
+#include "status.h"
+#include "Shader.h"
 #include  "Mesh.h"
 #include  "Scene.h"
 #include  "World.h"

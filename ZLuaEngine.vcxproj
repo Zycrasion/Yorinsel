@@ -147,15 +147,22 @@
   <ItemGroup>
     <ClCompile Include="Game\main.cpp" />
     <ClCompile Include="Include\ZLua\glad.c" />
+    <ClCompile Include="Include\ZLua\Shader.cpp" />
     <ClCompile Include="Include\ZLua\World.cpp" />
     <ClCompile Include="Include\ZLua\Mesh.cpp" />
     <ClCompile Include="Include\ZLua\Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Include\ZLua\Shader.h" />
+    <ClInclude Include="Include\ZLua\status.h" />
     <ClInclude Include="Include\ZLua\World.h" />
     <ClInclude Include="Include\ZLua\ZLua.h" />
     <ClInclude Include="Include\ZLua\Mesh.h" />
     <ClInclude Include="Include\ZLua\Scene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Game\Shaders\fragment.glsl" />
+    <None Include="Game\Shaders\vertex.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
