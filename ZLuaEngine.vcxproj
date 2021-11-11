@@ -151,6 +151,7 @@
     <ClCompile Include="Include\ZLua\World.cpp" />
     <ClCompile Include="Include\ZLua\Mesh.cpp" />
     <ClCompile Include="Include\ZLua\Scene.cpp" />
+    <ClCompile Include="Include\ZLua\vec2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\ZLua\Shader.h" />
@@ -159,6 +160,7 @@
     <ClInclude Include="Include\ZLua\ZLua.h" />
     <ClInclude Include="Include\ZLua\Mesh.h" />
     <ClInclude Include="Include\ZLua\Scene.h" />
+    <ClInclude Include="Include\ZLua\vec2.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Game\Shaders\fragment.glsl" />

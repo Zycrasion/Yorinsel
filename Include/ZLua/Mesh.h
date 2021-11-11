@@ -7,8 +7,6 @@
 #include "Shader.h"
 #include "status.h"
 
-std::vector<float> fromList(float verts[]);
-
 class Mesh
 {
 public:
