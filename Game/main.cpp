@@ -5,9 +5,10 @@ int main()
 {
 	World game(800, 600, "GameEngine Testing");
 	std::vector<float> verts = {
-		-0.5f, -0.5f, 0.0f,
-		0.5f, -0.5f, 0.0f,
-		0.0f,  0.5f, 0.0f
+		0.5f,  0.5f, 0.0f,   1.0f, 1.0f,   
+		 0.5f, -0.5f, 0.0f,  1.0f, 0.0f,   
+		-0.5f, -0.5f, 0.0f,  0.0f, 0.0f,  
+		-0.5f,  0.5f, 0.0f,  0.0f, 1.0f    
 	};
 
 	std::vector<float> texCoords = {
@@ -16,7 +17,7 @@ int main()
 		0.5f, 1.0f
 	};
 
-	Diffuse2D one(1.0f, 0.5f,0.5f);
+	Textured2D one("./Game/Tex/container.jpg");
 	Diffuse2D two(0.5f, 0.5f, 1.0f);
 	
 	Mesh Triangle(verts, one);

@@ -1,5 +1,7 @@
+#pragma once
 #ifndef ZLUA
 #define ZLUA
+#define STB_IMAGE_IMPLEMENTATION
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <stdexcept>
@@ -11,6 +13,7 @@
 #include "Materials/Colour.h"
 #include "Materials/Material.h"
 #include "Materials/Diffuse2D.h"
+#include "Materials/Textured2D.h"
 #include  "Mesh.h"
 #include  "Scene.h"
 #include  "World.h"

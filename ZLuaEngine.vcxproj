@@ -155,10 +155,12 @@
     <ClCompile Include="Include\ZLua\Scene.cpp" />
     <ClCompile Include="Include\ZLua\vec2.cpp" />
     <ClCompile Include="Include\ZLua\Materials\Material.cpp" />
+    <ClCompile Include="Include\ZLua\Materials\Textured2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\ZLua\Materials\Colour.h" />
     <ClInclude Include="Include\ZLua\Materials\Diffuse2D.h" />
+    <ClInclude Include="Include\ZLua\Materials\Textured2D.h" />
     <ClInclude Include="Include\ZLua\Shader.h" />
     <ClInclude Include="Include\ZLua\status.h" />
     <ClInclude Include="Include\ZLua\World.h" />
@@ -173,8 +175,13 @@
     <None Include="Game\Shaders\vertex.glsl" />
     <None Include="Include\ZLua\Materials\Shaders\Diffuse2D\fragment.glsl" />
     <None Include="Include\ZLua\Materials\Shaders\Diffuse2D\vertex.glsl" />
+    <None Include="Include\ZLua\Materials\Shaders\Textured2D\fragment.glsl" />
+    <None Include="Include\ZLua\Materials\Shaders\Textured2D\vertex.glsl" />
     <None Include="x64\Debug\Shaders\Diffuse2D\fragment.glsl" />
     <None Include="x64\Debug\Shaders\Diffuse2D\vertex.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Game\Tex\container.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
