@@ -36,6 +36,15 @@
     <ClCompile Include="Include\ZLua\vec2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Include\ZLua\Materials\Material.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\ZLua\Materials\Colour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\ZLua\Materials\Diffuse2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\ZLua\World.h">
@@ -59,9 +68,20 @@
     <ClInclude Include="Include\ZLua\vec2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Include\ZLua\Materials\Material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ZLua\Materials\Colour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ZLua\Materials\Diffuse2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Game\Shaders\vertex.glsl" />
     <None Include="Game\Shaders\fragment.glsl" />
+    <None Include="Include\ZLua\Materials\Shaders\Diffuse2D\vertex.glsl" />
+    <None Include="Include\ZLua\Materials\Shaders\Diffuse2D\fragment.glsl" />
   </ItemGroup>
 </Project>

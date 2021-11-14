@@ -78,7 +78,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Include;C:\Users\Hendrix\Development\ZLuaEngine\Include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Include;C:\Users\Hendrix\Development\Zest\Include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -145,15 +145,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Include\ZLua\Materials\Colour.cpp" />
     <ClCompile Include="Game\main.cpp" />
     <ClCompile Include="Include\ZLua\glad.c" />
+    <ClCompile Include="Include\ZLua\Materials\Diffuse2D.cpp" />
     <ClCompile Include="Include\ZLua\Shader.cpp" />
     <ClCompile Include="Include\ZLua\World.cpp" />
     <ClCompile Include="Include\ZLua\Mesh.cpp" />
     <ClCompile Include="Include\ZLua\Scene.cpp" />
     <ClCompile Include="Include\ZLua\vec2.cpp" />
+    <ClCompile Include="Include\ZLua\Materials\Material.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Include\ZLua\Materials\Colour.h" />
+    <ClInclude Include="Include\ZLua\Materials\Diffuse2D.h" />
     <ClInclude Include="Include\ZLua\Shader.h" />
     <ClInclude Include="Include\ZLua\status.h" />
     <ClInclude Include="Include\ZLua\World.h" />
@@ -161,10 +166,13 @@
     <ClInclude Include="Include\ZLua\Mesh.h" />
     <ClInclude Include="Include\ZLua\Scene.h" />
     <ClInclude Include="Include\ZLua\vec2.h" />
+    <ClInclude Include="Include\ZLua\Materials\Material.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Game\Shaders\fragment.glsl" />
     <None Include="Game\Shaders\vertex.glsl" />
+    <None Include="Include\ZLua\Materials\Shaders\Diffuse2D\fragment.glsl" />
+    <None Include="Include\ZLua\Materials\Shaders\Diffuse2D\vertex.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

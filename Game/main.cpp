@@ -16,8 +16,10 @@ int main()
 		0.5f, 1.0f
 	};
 
-	Shader diffuse("./Game/Shaders/fragment.glsl", "./Game/Shaders/vertex.glsl");
-	Mesh Triangle(verts, diffuse.getID());
+	Diffuse2D one(1.0f, 0.5f,0.5f);
+	Diffuse2D two(100.0f, 100.0f, 255.0f);
+	
+	Mesh Triangle(verts, one);
 
 	std::vector<vec2> Tri2 = 
 	{
@@ -26,7 +28,7 @@ int main()
 		vec2(1.0f,-1.0f)
 	};
 
-	Mesh Triangle2(fromList(Tri2),diffuse.getID());
+	Mesh Triangle2(fromList(Tri2),two);
 
 	std::vector<float> d = fromList(Tri2);
 

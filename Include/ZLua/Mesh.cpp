@@ -1,10 +1,9 @@
 #include "Mesh.h"
 
-Mesh::Mesh(std::vector<float> vertexes, unsigned int shader_)
+Mesh::Mesh(std::vector<float> vertexes, Material mat_)
 {
 	vertices = vertexes;
-	shader = Shader(shader_);
-	cout << vertices.size();
+	mat = mat_;
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
 	glBindVertexArray(VAO);
@@ -17,7 +16,7 @@ Mesh::Mesh(std::vector<float> vertexes, unsigned int shader_)
 }
 ZLUA_STATUS Mesh::draw()
 {
-	shader.use();
+	mat.apply();
 	glBindVertexArray(VAO);
 	glDrawArrays(GL_TRIANGLES, 0, 3);
 	return ZLUA_STATUS::ZLUA_OK;

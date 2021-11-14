@@ -4,18 +4,18 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
-#include "Shader.h"
+#include "Materials/Material.h"
 #include "status.h"
 
 class Mesh
 {
 public:
 	std::vector<float> vertices;
-	Shader shader;
+	Material mat;
 	unsigned int VBO;
 	unsigned int VAO;
 
-	Mesh(std::vector<float> vertexes, unsigned int shader_);
+	Mesh(std::vector<float> vertexes, Material mat);
 	ZLUA_STATUS draw();
 };
 
