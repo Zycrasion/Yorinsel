@@ -9,7 +9,7 @@ protected:
 	Shader shader;
 public:
 	Material(float r, float g, float b, const char* fShader, const char* vShader);
-	Material() = default;
+	//Material() = default;
 	void setColour(float r, float g, float b);
 	//void setTexture();
 	Colour getColour();

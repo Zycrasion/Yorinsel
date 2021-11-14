@@ -26,8 +26,8 @@ Shader::Shader(const char* fragmentPath, const char* vertexPath)
 
 	try
 	{
-		fShaderFile.open(fragmentPath);
-		vShaderFile.open(vertexPath);
+		fShaderFile.open((const char*)fragmentPath);
+		vShaderFile.open((const char*)vertexPath);
 		stringstream vShaderStream, fShaderStream;
 		vShaderStream << vShaderFile.rdbuf();
 		fShaderStream << fShaderFile.rdbuf();
@@ -41,7 +41,6 @@ Shader::Shader(const char* fragmentPath, const char* vertexPath)
 		cout << "ERROR::SHADER::FILE UNABLE TO READ ONE OR MORE SHADER FILES\n";
 		failed = true;
 	}
-
 	if (!failed)
 	{
 		const char* fShaderCode = fragmentSource.c_str();
@@ -104,7 +103,6 @@ void Shader::setInt(const string& name, int value)
 
 void Shader::setFloat(const string& name, float value)
 {
-	cout << " " << ID;
 	glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
 }
 

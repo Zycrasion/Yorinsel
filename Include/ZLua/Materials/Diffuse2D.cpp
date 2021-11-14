@@ -1,8 +1,11 @@
 #include "Diffuse2D.h"
 
-Diffuse2D::Diffuse2D(float red, float green, float blue)
+Diffuse2D::Diffuse2D(float red, float green, float blue) : Material(red,green,blue,
+	"./Include/ZLua/Materials/Shaders/Diffuse2D/fragment.glsl",
+	"./Include/ZLua/Materials/Shaders/Diffuse2D/vertex.glsl"
+)
 {
-	Material::Material(red, green, blue, pathToFragment, pathToVertex);
+
 }
 
 //Diffuse2D::Diffuse2D()

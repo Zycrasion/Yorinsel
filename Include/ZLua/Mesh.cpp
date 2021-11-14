@@ -1,6 +1,6 @@
 #include "Mesh.h"
 
-Mesh::Mesh(std::vector<float> vertexes, Material mat_)
+Mesh::Mesh(std::vector<float> vertexes, Material mat_) : mat((const Material&) mat_)
 {
 	vertices = vertexes;
 	mat = mat_;

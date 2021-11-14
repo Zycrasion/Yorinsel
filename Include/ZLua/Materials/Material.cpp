@@ -29,5 +29,4 @@ void Material::apply()
 	shader.setFloat("red", colour.red);
 	shader.setFloat("blue", colour.blue);
 	shader.setFloat("green", colour.green);
-	cout << glGetError() << " ";
 }

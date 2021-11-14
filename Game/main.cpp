@@ -17,7 +17,7 @@ int main()
 	};
 
 	Diffuse2D one(1.0f, 0.5f,0.5f);
-	Diffuse2D two(100.0f, 100.0f, 255.0f);
+	Diffuse2D two(0.5f, 0.5f, 1.0f);
 	
 	Mesh Triangle(verts, one);
 

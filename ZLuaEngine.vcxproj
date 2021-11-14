@@ -83,7 +83,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\Hendrix\Development\ZLuaEngine\Include;C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Hendrix\Development\Zest\Include;C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -173,6 +173,8 @@
     <None Include="Game\Shaders\vertex.glsl" />
     <None Include="Include\ZLua\Materials\Shaders\Diffuse2D\fragment.glsl" />
     <None Include="Include\ZLua\Materials\Shaders\Diffuse2D\vertex.glsl" />
+    <None Include="x64\Debug\Shaders\Diffuse2D\fragment.glsl" />
+    <None Include="x64\Debug\Shaders\Diffuse2D\vertex.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

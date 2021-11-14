@@ -83,5 +83,7 @@
     <None Include="Game\Shaders\fragment.glsl" />
     <None Include="Include\ZLua\Materials\Shaders\Diffuse2D\vertex.glsl" />
     <None Include="Include\ZLua\Materials\Shaders\Diffuse2D\fragment.glsl" />
+    <None Include="x64\Debug\Shaders\Diffuse2D\fragment.glsl" />
+    <None Include="x64\Debug\Shaders\Diffuse2D\vertex.glsl" />
   </ItemGroup>
 </Project>
