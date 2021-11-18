@@ -47,7 +47,8 @@ void Textured2D::init()
 
 void Textured2D::apply()
 {
-	shader.use();
 	glBindTexture(GL_TEXTURE_2D, texture);
+	shader.use();
+	
 
 }

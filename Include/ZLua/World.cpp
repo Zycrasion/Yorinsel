@@ -26,6 +26,7 @@ World::World(int width, int height, const char* title)
 		throw std::runtime_error("ERROR::INIT::GLAD Unable To Init Glad. CODE: INIT3");
 
 	glViewport(0, 0, width, height);
+	glEnable(GL_TEXTURE_2D);
 	glfwSetFramebufferSizeCallback(glWindow, resized);
 }
 
