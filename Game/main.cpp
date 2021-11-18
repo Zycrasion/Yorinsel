@@ -5,15 +5,22 @@ int main()
 {
 	World game(800, 600, "GameEngine Testing");
 	std::vector<float> verts = {
-		0.5f,  0.5f, 0.0f,   1.0f, 1.0f,   
-		 0.5f, -0.5f, 0.0f,  1.0f, 0.0f,   
-		-0.5f, -0.5f, 0.0f,  0.0f, 0.0f,  
-		-0.5f,  0.5f, 0.0f,  0.0f, 1.0f    
+		 0.5f,  0.5f, 0.0f,   1.0f, 1.0f,   
+		 0.5f, -0.5f, 0.0f,   1.0f, 0.0f,   
+		-0.5f, -0.5f, 0.0f,   0.0f, 0.0f,  
+		-0.5f,  0.5f, 0.0f,   0.0f, 1.0f    
 	};
+
+	/*std::vector<float> verts = {
+		 0.5f,  0.5f, 0.0f,
+		 0.5f, -0.5f, 0.0f,
+		-0.5f, -0.5f, 0.0f,
+		-0.5f,  0.5f, 0.0f    
+	};*/
 
 	std::vector<int> indices = {
 		0,1,2,
-		1,2,3
+		2,3,0
 	};
 
 	std::vector<float> texCoords = {
