@@ -36,7 +36,7 @@ void Textured2D::init()
 	{
 		glTexImage2D(texture, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
 		glGenerateMipmap(texture);
-		stbi_image_free(&data);
+		//stbi_image_free(&data);
 	}
 	else
 	{
