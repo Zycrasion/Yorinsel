@@ -1,10 +1,6 @@
 #pragma once
 #include "Material.h"
 #include "Colour.h"
-#ifndef STB_IMAGE_IMPLEMENTATION
-#define STB_IMAGE_IMPLEMENTATION
-#include <stb_image.h>
-#endif
 
 
 class Textured2D : public Material
@@ -16,4 +12,3 @@ public:
 	void init();
 	void apply();
 };
-

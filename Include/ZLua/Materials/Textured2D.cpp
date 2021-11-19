@@ -1,4 +1,8 @@
 #include "Textured2D.h"
+#ifndef STB_IMAGE_IMPLEMENTATION
+#define STB_IMAGE_IMPLEMENTATION
+#include <stb_image.h>
+#endif
 
 Textured2D::Textured2D(const char* texturePath_) : Material(0.0f, 0.0f, 0.0f,
 	"./Include/ZLua/Materials/Shaders/Textured2D/fragment.glsl",
@@ -32,13 +36,14 @@ void Textured2D::init()
 	{
 		glTexImage2D(texture, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
 		glGenerateMipmap(texture);
+		stbi_image_free(&data);
 	}
 	else
 	{
 		cout << "ERROR::MATERIAL::TEXTURE2D Unable to read texture file.";
 	}
 	//freeing ram
-	stbi_image_free(&data);
+	
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
@@ -49,6 +54,6 @@ void Textured2D::apply()
 {
 	glBindTexture(GL_TEXTURE_2D, texture);
 	shader.use();
-	
+
 
 }
