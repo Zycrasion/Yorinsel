@@ -19,8 +19,8 @@ int main()
 	};*/
 
 	std::vector<int> indices = {
-		0,1,2,
-		2,3,0
+		0,1,3,
+		1,2,3
 	};
 
 	std::vector<float> texCoords = {
@@ -29,12 +29,13 @@ int main()
 		0.5f, 1.0f
 	};
 
-	Textured2D one("./Game/Tex/container.jpg");
+	Textured2D one("C:\\Users\\Hendrix\\Development\\Zest\\container.jpg");
 	Diffuse2D two(0.5f, 0.5f, 1.0f);
 	
 	Mesh Triangle(verts, indices,  one);
 
-	std::vector<vec2> Tri2 = 
+	std::vector<vec2> Tri2 =
+
 	{
 		vec2(-1.0f,-1.0f),
 		vec2(1.0f,1.0f),

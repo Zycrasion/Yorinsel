@@ -4,8 +4,7 @@
 #include <stb_image.h>
 #endif
 
-Textured2D::Textured2D(const char* texturePath_) : Material(0.0f, 0.0f, 0.0f,
-	"./Include/ZLua/Materials/Shaders/Textured2D/fragment.glsl",
+Textured2D::Textured2D(const char* texturePath_) : shader("./Include/ZLua/Materials/Shaders/Textured2D/fragment.glsl",
 	"./Include/ZLua/Materials/Shaders/Textured2D/vertex.glsl")
 {
 	texturePath = texturePath_;
@@ -14,9 +13,15 @@ Textured2D::Textured2D(const char* texturePath_) : Material(0.0f, 0.0f, 0.0f,
 
 void Textured2D::init()
 {
+
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
+	glEnableVertexAttribArray(0);
+	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
+	glEnableVertexAttribArray(1);
 	
 	glGenTextures(1, &texture);
 	glBindTexture(GL_TEXTURE_2D, texture);
+	printf("texture:%i ", texture);
 	//Setting Texture Wrapping Method (DEFUALT MIRRORED REPEAT)
 	//TODO MAKE TEXTURE WRAPPING DYNAMIC
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
@@ -34,8 +39,10 @@ void Textured2D::init()
 	//Generating Textures
 	if (data)
 	{
-		glTexImage2D(texture, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-		glGenerateMipmap(texture);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+		glGenerateMipmap(GL_TEXTURE_2D);
+		printf("%i %i %i %i", (int)data[0], (int)data[1], (int)data[2], (int)data[3]);
+		printf("\n width: %i, height: %i, channels: %i", width, height, nrChannels);
 		//stbi_image_free(&data);
 	}
 	else
@@ -44,16 +51,10 @@ void Textured2D::init()
 	}
 	//freeing ram
 	
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
-	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
-	glEnableVertexAttribArray(1);
 }
 
 void Textured2D::apply()
 {
 	glBindTexture(GL_TEXTURE_2D, texture);
 	shader.use();
-
-
 }

@@ -181,6 +181,7 @@
     <None Include="x64\Debug\Shaders\Diffuse2D\vertex.glsl" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="container.jpg" />
     <Image Include="Game\Tex\container.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
