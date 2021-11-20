@@ -7,14 +7,14 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
-#include "status.h"
-#include "vec2.h"
-#include "Shader.h"
-#include "Materials/Colour.h"
-#include "Materials/Material.h"
-#include "Materials/Diffuse2D.h"
-#include "Materials/Textured2D.h"
-#include  "Mesh.h"
-#include  "Scene.h"
-#include  "World.h"
+#include "./Core/status.h"
+#include "./Graphics/vec2.h"
+#include "./Graphics/Shader.h"
+#include "./Graphics/Materials/Colour.h"
+#include "./Graphics/Materials/Material.h"
+#include "./Graphics/Materials/Diffuse2D.h"
+#include "./Graphics/Materials/Textured2D.h"
+#include  "./Core/Mesh.h"
+#include  "./Core/Scene.h"
+#include  "./Core/World.h"
 #endif

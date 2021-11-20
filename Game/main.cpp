@@ -29,7 +29,7 @@ int main()
 		0.5f, 1.0f
 	};
 
-	Textured2D one("C:\\Users\\Hendrix\\Development\\Zest\\container.jpg");
+	Textured2D one("./Game/Tex/container.jpg");
 	Diffuse2D two(0.5f, 0.5f, 1.0f);
 	
 	Mesh Triangle(verts, indices,  one);

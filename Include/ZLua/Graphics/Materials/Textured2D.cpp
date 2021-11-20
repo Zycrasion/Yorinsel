@@ -4,8 +4,8 @@
 #include <stb_image.h>
 #endif
 
-Textured2D::Textured2D(const char* texturePath_) : shader("./Include/ZLua/Materials/Shaders/Textured2D/fragment.glsl",
-	"./Include/ZLua/Materials/Shaders/Textured2D/vertex.glsl")
+Textured2D::Textured2D(const char* texturePath_) : shader("./Include/ZLua/Graphics/Materials/Shaders/Textured2D/fragment.glsl",
+	"./Include/ZLua/Graphics/Materials/Shaders/Textured2D/vertex.glsl")
 {
 	texturePath = texturePath_;
 	texture = 0;

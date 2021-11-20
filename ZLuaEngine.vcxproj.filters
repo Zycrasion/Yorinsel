@@ -18,87 +18,84 @@
     <ClCompile Include="Game\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Include\ZLua\World.cpp">
+    <ClCompile Include="Include\ZLua\Core\World.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Include\ZLua\glad.c">
+    <ClCompile Include="Include\ZLua\Graphics\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Include\ZLua\Mesh.cpp">
+    <ClCompile Include="Include\ZLua\Core\Mesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Include\ZLua\Scene.cpp">
+    <ClCompile Include="Include\ZLua\Core\Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Include\ZLua\Shader.cpp">
+    <ClCompile Include="Include\ZLua\Graphics\Shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Include\ZLua\vec2.cpp">
+    <ClCompile Include="Include\ZLua\Graphics\vec2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Include\ZLua\Materials\Material.cpp">
+    <ClCompile Include="Include\ZLua\Graphics\Materials\Material.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Include\ZLua\Materials\Colour.cpp">
+    <ClCompile Include="Include\ZLua\Graphics\Materials\Colour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Include\ZLua\Materials\Diffuse2D.cpp">
+    <ClCompile Include="Include\ZLua\Graphics\Materials\Diffuse2D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Include\ZLua\Materials\Textured2D.cpp">
+    <ClCompile Include="Include\ZLua\Graphics\Materials\Textured2D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\ZLua\World.h">
+    <ClInclude Include="Include\ZLua\Core\World.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Include\ZLua\ZLua.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\ZLua\Mesh.h">
+    <ClInclude Include="Include\ZLua\Core\Mesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\ZLua\Scene.h">
+    <ClInclude Include="Include\ZLua\Core\Scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\ZLua\Shader.h">
+    <ClInclude Include="Include\ZLua\Graphics\Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\ZLua\status.h">
+    <ClInclude Include="Include\ZLua\Core\status.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\ZLua\vec2.h">
+    <ClInclude Include="Include\ZLua\Graphics\vec2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\ZLua\Materials\Material.h">
+    <ClInclude Include="Include\ZLua\Graphics\Materials\Material.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\ZLua\Materials\Colour.h">
+    <ClInclude Include="Include\ZLua\Graphics\Materials\Colour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\ZLua\Materials\Diffuse2D.h">
+    <ClInclude Include="Include\ZLua\Graphics\Materials\Diffuse2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\ZLua\Materials\Textured2D.h">
+    <ClInclude Include="Include\ZLua\Graphics\Materials\Textured2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Game\Shaders\vertex.glsl" />
     <None Include="Game\Shaders\fragment.glsl" />
-    <None Include="Include\ZLua\Materials\Shaders\Textured2D\vertex.glsl" />
-    <None Include="Include\ZLua\Materials\Shaders\Textured2D\fragment.glsl" />
+    <None Include="Include\ZLua\Graphics\Materials\Shaders\Textured2D\vertex.glsl" />
+    <None Include="Include\ZLua\Graphics\Materials\Shaders\Textured2D\fragment.glsl" />
     <None Include="x64\Debug\Shaders\Diffuse2D\fragment.glsl" />
     <None Include="x64\Debug\Shaders\Diffuse2D\vertex.glsl" />
-    <None Include="Include\ZLua\Materials\Shaders\Diffuse2D\fragment.glsl" />
-    <None Include="Include\ZLua\Materials\Shaders\Diffuse2D\vertex.glsl" />
+    <None Include="Include\ZLua\Graphics\Materials\Shaders\Diffuse2D\fragment.glsl" />
+    <None Include="Include\ZLua\Graphics\Materials\Shaders\Diffuse2D\vertex.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Game\Tex\container.jpg">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="container.jpg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
