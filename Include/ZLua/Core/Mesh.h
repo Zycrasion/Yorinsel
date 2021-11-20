@@ -4,8 +4,11 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
+#include "../Graphics/Materials/Material.h"
 #include "../Graphics/Materials/Textured2D.h"
 #include "./status.h"
+
+
 class Mesh
 {
 public:

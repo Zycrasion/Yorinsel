@@ -4,7 +4,7 @@
 #include <stb_image.h>
 #endif
 
-Textured2D::Textured2D(const char* texturePath_) : shader("./Include/ZLua/Graphics/Materials/Shaders/Textured2D/fragment.glsl",
+Textured2D::Textured2D(const char* texturePath_) : Material("./Include/ZLua/Graphics/Materials/Shaders/Textured2D/fragment.glsl",
 	"./Include/ZLua/Graphics/Materials/Shaders/Textured2D/vertex.glsl")
 {
 	texturePath = texturePath_;
@@ -13,7 +13,6 @@ Textured2D::Textured2D(const char* texturePath_) : shader("./Include/ZLua/Graphi
 
 void Textured2D::init()
 {
-
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
@@ -48,7 +47,7 @@ void Textured2D::init()
 	else
 	{
 		cout << "ERROR::MATERIAL::TEXTURE2D Unable to read texture file.";
-	}
+	} 
 	//freeing ram
 	
 }
@@ -57,4 +56,5 @@ void Textured2D::apply()
 {
 	glBindTexture(GL_TEXTURE_2D, texture);
 	shader.use();
+
 }

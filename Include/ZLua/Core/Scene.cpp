@@ -1,9 +1,10 @@
 #include "Scene.h"
 
-Scene::Scene(std::string sceneName_, bool DebugMode_)
+Scene::Scene(std::string sceneName_, bool DebugMode_, ZWorldBehaviour* behave)
 {
 	sceneName = sceneName_;
 	DebugMode = DebugMode_;
+	behaviour = behave;
 }
 
 Scene::Scene()
@@ -44,9 +45,11 @@ void Scene::draw()
 {
 	glClearColor(0.5f, 0.1f, 0.1f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
+	behaviour->draw(frame);
 	int n = Meshes.size();
 	for (int i = 0; i < n; i++)
 	{
 		Meshes[i].draw();
 	}
+	frame.draw();
 }

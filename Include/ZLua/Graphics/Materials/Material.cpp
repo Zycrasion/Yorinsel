@@ -6,9 +6,8 @@
 //	shader = Shader();
 //}
 
-Material::Material(float r, float g, float b, const char* fShader, const char* vShader)
+Material::Material(const char* fShader, const char* vShader)
 {
-	colour = Colour(r, g, b);
 	shader = Shader(fShader, vShader);
 }
 
@@ -25,10 +24,7 @@ Colour Material::getColour()
 
 void Material::apply()
 {
-	shader.use();
-	shader.setFloat("red", colour.red);
-	shader.setFloat("blue", colour.blue);
-	shader.setFloat("green", colour.green);
+	
 }
 
 void Material::init()

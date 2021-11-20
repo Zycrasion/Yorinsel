@@ -7,7 +7,7 @@ void resized(GLFWwindow* window, int width, int height)
 }
 
 
-World::World(int width, int height, const char* title)
+World::World(int width, int height, const char* title) : gravity(0,-10.f), world(gravity)
 {
 	if (!glfwInit())
 		throw std::runtime_error("ERROR::INIT Unable to Init GLFW3. CODE: INIT1");
@@ -60,3 +60,12 @@ void World::setScene(Scene scene)
 	currScene = scene;
 }
 
+void World::setGravity(float str)
+{
+	gravity.y = -str;
+}
+
+void World::initB2D()
+{
+	world = b2World(gravity);
+}

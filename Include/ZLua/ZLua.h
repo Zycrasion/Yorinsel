@@ -1,14 +1,13 @@
 #pragma once
 #ifndef ZLUA
 #define ZLUA
-#define STB_IMAGE_IMPLEMENTATION
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <stdexcept>
 #include <string>
 #include <vector>
 #include "./Core/status.h"
-#include "./Graphics/vec2.h"
+#include "./Core/vec2.h"
 #include "./Graphics/Shader.h"
 #include "./Graphics/Materials/Colour.h"
 #include "./Graphics/Materials/Material.h"
@@ -17,4 +16,7 @@
 #include  "./Core/Mesh.h"
 #include  "./Core/Scene.h"
 #include  "./Core/World.h"
+#include "./Core/GameObject.h"
+#include "./Graphics/Renderer.h"
+#include "./Behaviours/ZWorldBehaviour.h"
 #endif

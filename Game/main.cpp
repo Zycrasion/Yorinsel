@@ -1,6 +1,25 @@
 #include <ZLua/ZLua.h>
 bool DebugMode = true;
 
+class Game : public ZWorldBehaviour
+{
+public:
+	void init()
+	{
+
+	}
+
+	void draw(Renderer currFrame)
+	{
+		
+	}
+	void end()
+	{
+
+	}
+};
+
+
 int main()
 {
 	World game(800, 600, "GameEngine Testing");
@@ -30,8 +49,8 @@ int main()
 	};
 
 	Textured2D one("./Game/Tex/container.jpg");
-	Diffuse2D two(0.5f, 0.5f, 1.0f);
-	
+	//Diffuse2D two(0.5f, 0.5f, 1.0f);
+
 	Mesh Triangle(verts, indices,  one);
 
 	std::vector<vec2> Tri2 =
@@ -52,7 +71,7 @@ int main()
 	std::vector<float> d = fromList(Tri2);
 
 
-	Scene mainScene("MainScene", DebugMode);
+	Scene mainScene("MainScene", DebugMode, new Game());
 	mainScene.add(Triangle);
 	//mainScene.add(Triangle2);
 	game.setScene(mainScene);
