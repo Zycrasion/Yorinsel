@@ -51,7 +51,8 @@ int main()
 	Textured2D one("./Game/Tex/container.jpg");
 	Diffuse2D two(0.5f, 0.5f, 1.0f);
 
-	Mesh Triangle(verts, indices,  one);
+	Mesh Rectangle = Mesh(verts, indices, one);
+	GameObject Player = GameObject(Rectangle);
 
 	std::vector<vec2> Tri2 =
 
@@ -72,7 +73,7 @@ int main()
 
 
 	Scene mainScene("MainScene", DebugMode, new Game());
-	mainScene.add(Triangle);
+	mainScene.add(&Player);
 	//mainScene.add(Triangle2);
 	game.setScene(mainScene);
 	game.init();

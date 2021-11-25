@@ -6,7 +6,7 @@ class World
 {
 private:
 	b2Vec2 gravity;
-	b2World world;
+	b2World* world;
 public:
 	GLFWwindow* glWindow;
 	Scene currScene;
@@ -17,7 +17,6 @@ public:
 	int end();
 	void setGravity(float str);
 	void initB2D();
-
 	void setScene(Scene scene);
 };
 

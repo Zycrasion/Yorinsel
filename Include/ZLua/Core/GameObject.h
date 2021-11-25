@@ -4,9 +4,11 @@
 
 class GameObject
 {
+public:
 	Mesh mesh;
 	vec2 position;
 	vec2 velocity;
-	GameObject(Mesh* mesh);
+	GameObject(Mesh mesh);
+	void draw();
 };
 

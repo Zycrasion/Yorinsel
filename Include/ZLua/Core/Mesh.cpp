@@ -20,7 +20,7 @@ Mesh::Mesh(std::vector<float> vertexes, std::vector<int> indices_, Textured2D ma
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
 }
-ZLUA_STATUS Mesh::draw()
+void Mesh::draw()
 {
 	mat->apply();
 	glBindVertexArray(VAO);
@@ -28,5 +28,10 @@ ZLUA_STATUS Mesh::draw()
 	glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
-	return ZLUA_STATUS::ZLUA_OK;
 }
+
+//Mesh::~Mesh()
+//{
+//	delete mat;
+//
+//}

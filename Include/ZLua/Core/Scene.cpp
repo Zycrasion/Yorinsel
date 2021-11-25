@@ -17,7 +17,7 @@ void Scene::copy(Scene scene)
 {
 	sceneName = scene.name();
 	DebugMode = scene.Debug();
-	Meshes = scene.Meshes;
+	//Objects = scene.Objects;
 }
 
 std::string Scene::name()
@@ -36,9 +36,14 @@ bool Scene::Debug(bool DebugMode_)
 	return DebugMode;
 }
 
-void Scene::add(Mesh mesh)
+//void Scene::add(Mesh* mesh)
+//{
+//	Meshes.push_back(mesh);
+//}
+
+void Scene::add(GameObject* mesh)
 {
-	Meshes.push_back(mesh);
+	Objects.push_back(mesh);
 }
 
 void Scene::draw()
@@ -46,10 +51,10 @@ void Scene::draw()
 	glClearColor(0.5f, 0.1f, 0.1f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 	behaviour->draw(frame);
-	int n = Meshes.size();
+	int n = (int) Objects.size();
 	for (int i = 0; i < n; i++)
 	{
-		Meshes[i].draw();
+		Objects[i]->draw();
 	}
 	frame.draw();
 }

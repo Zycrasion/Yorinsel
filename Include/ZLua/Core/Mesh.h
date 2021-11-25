@@ -20,6 +20,7 @@ public:
 	unsigned int VAO;
 
 	Mesh(std::vector<float> vertexes, std::vector<int> indices, Textured2D mat);
-	ZLUA_STATUS draw();
+	void draw();
+	//~Mesh();
 };
 

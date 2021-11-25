@@ -16,8 +16,8 @@ public:
 	ZWorldBehaviour* behaviour;
 	Renderer frame;
 	
-	std::vector<Mesh> Meshes;
-	std::vector<GameObject> Objects;
+	std::vector<GameObject*> Objects;
+	//std::vector<Mesh*> Meshes;
 
 	Scene();
 	Scene(std::string sceneName_, bool DebugMode_, ZWorldBehaviour* o);
@@ -27,7 +27,8 @@ public:
 	bool Debug();
 	bool Debug(bool DebugMode_);
 
-	void add(Mesh mesh);
+	//void add(Mesh *mesh);
+	void add(GameObject *mesh);
 	void draw();
 };
 
