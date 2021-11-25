@@ -72,3 +72,8 @@ void World::initB2D()
 {
 	world = new b2World(gravity);
 }
+
+b2World* World::getWorld()
+{
+	return world;
+}

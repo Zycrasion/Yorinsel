@@ -52,7 +52,7 @@ int main()
 	Diffuse2D two(0.5f, 0.5f, 1.0f);
 
 	Mesh Rectangle = Mesh(verts, indices, one);
-	GameObject Player = GameObject(Rectangle);
+	GameObject Player = GameObject(Rectangle,vec2(0,0),game.getWorld(),0,0);
 
 	std::vector<vec2> Tri2 =
 

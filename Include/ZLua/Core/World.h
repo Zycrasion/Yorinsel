@@ -18,6 +18,7 @@ public:
 	void setGravity(float str);
 	void initB2D();
 	void setScene(Scene scene);
+	b2World* getWorld();
 };
 
 void resized(GLFWwindow* window, int width, int height);
