@@ -49,7 +49,7 @@ int main()
 	};
 
 	Textured2D one("./Game/Tex/container.jpg");
-	//Diffuse2D two(0.5f, 0.5f, 1.0f);
+	Diffuse2D two(0.5f, 0.5f, 1.0f);
 
 	Mesh Triangle(verts, indices,  one);
 

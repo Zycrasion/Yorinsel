@@ -15,7 +15,7 @@ public:
 	std::vector<float> vertices;
 	std::vector<int> indices;
 	unsigned int EBO;
-	Textured2D mat;
+	Material *mat;
 	unsigned int VBO;
 	unsigned int VAO;
 
