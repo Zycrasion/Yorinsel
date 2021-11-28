@@ -19,7 +19,7 @@ public:
 	unsigned int VBO;
 	unsigned int VAO;
 
-	Mesh(std::vector<float> vertexes, std::vector<int> indices, Textured2D mat);
+	Mesh(std::vector<float> vertexes, std::vector<int> indices, Material* mat);
 	void draw();
 	//~Mesh();
 };

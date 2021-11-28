@@ -7,7 +7,7 @@ void resized(GLFWwindow* window, int width, int height)
 }
 
 
-World::World(int width, int height, const char* title) : gravity(0,-10.f)
+World::World(int width, int height, const char* title)
 {
 	if (!glfwInit())
 		throw std::runtime_error("ERROR::INIT Unable to Init GLFW3. CODE: INIT1");
@@ -30,7 +30,7 @@ World::World(int width, int height, const char* title) : gravity(0,-10.f)
 	glEnable(GL_TEXTURE_2D);
 	glfwSetFramebufferSizeCallback(glWindow, resized);
 
-	world = new b2World(gravity);
+	//world = new b2World(gravity);
 
 }
 
@@ -63,17 +63,12 @@ void World::setScene(Scene scene)
 	currScene = scene;
 }
 
-void World::setGravity(float str)
-{
-	gravity.y = -str;
-}
-
-void World::initB2D()
-{
-	world = new b2World(gravity);
-}
-
-b2World* World::getWorld()
-{
-	return world;
-}
+//void World::setGravity(float str)
+//{
+//	gravity.y = -str;
+//}
+//
+//void World::initB2D()
+//{
+//	world = new b2World(gravity);
+//}

@@ -1,10 +1,10 @@
 #include "Mesh.h"
 
-Mesh::Mesh(std::vector<float> vertexes, std::vector<int> indices_, Textured2D mat_)
+Mesh::Mesh(std::vector<float> vertexes, std::vector<int> indices_, Material* mat_)
 {
 	vertices = vertexes;
 	indices = indices_;
-	mat = &mat_;
+	mat = mat_;
 	glGenVertexArrays(1, &VAO);
 
 	glGenBuffers(1, &VBO);
