@@ -83,7 +83,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\Hendrix\Development\Zest\Include;C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Hendrix\Development\Zest\Engine;C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -145,44 +145,45 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Include\ZLua\Core\GameObject.cpp" />
-    <ClCompile Include="Include\ZLua\Graphics\Materials\Colour.cpp" />
+    <ClCompile Include="Engine\ZLua\Core\GameObject.cpp" />
+    <ClCompile Include="Engine\ZLua\Graphics\Materials\Colour.cpp" />
     <ClCompile Include="Game\main.cpp" />
-    <ClCompile Include="Include\ZLua\Graphics\glad.c" />
-    <ClCompile Include="Include\ZLua\Graphics\Materials\Diffuse2D.cpp" />
-    <ClCompile Include="Include\ZLua\Graphics\Renderer.cpp" />
-    <ClCompile Include="Include\ZLua\Graphics\Shader.cpp" />
-    <ClCompile Include="Include\ZLua\Core\World.cpp" />
-    <ClCompile Include="Include\ZLua\Core\Mesh.cpp" />
-    <ClCompile Include="Include\ZLua\Core\Scene.cpp" />
-    <ClCompile Include="Include\ZLua\Core\vec2.cpp" />
-    <ClCompile Include="Include\ZLua\Graphics\Materials\Material.cpp" />
-    <ClCompile Include="Include\ZLua\Graphics\Materials\Textured2D.cpp" />
-    <ClCompile Include="Include\ZLua\Behaviours\ZWorldBehaviour.cpp" />
+    <ClCompile Include="Engine\ZLua\Graphics\glad.c" />
+    <ClCompile Include="Engine\ZLua\Graphics\Materials\Diffuse2D.cpp" />
+    <ClCompile Include="Engine\ZLua\Graphics\Renderer.cpp" />
+    <ClCompile Include="Engine\ZLua\Graphics\Shader.cpp" />
+    <ClCompile Include="Engine\ZLua\Core\World.cpp" />
+    <ClCompile Include="Engine\ZLua\Core\Mesh.cpp" />
+    <ClCompile Include="Engine\ZLua\Core\Scene.cpp" />
+    <ClCompile Include="Engine\ZLua\Core\vec2.cpp" />
+    <ClCompile Include="Engine\ZLua\Graphics\Materials\Material.cpp" />
+    <ClCompile Include="Engine\ZLua\Graphics\Materials\Textured2D.cpp" />
+    <ClCompile Include="Engine\ZLua\Behaviours\ZWorldBehaviour.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\ZLua\Core\GameObject.h" />
-    <ClInclude Include="Include\ZLua\Graphics\Materials\Colour.h" />
-    <ClInclude Include="Include\ZLua\Graphics\Materials\Diffuse2D.h" />
-    <ClInclude Include="Include\ZLua\Graphics\Materials\Textured2D.h" />
-    <ClInclude Include="Include\ZLua\Graphics\Renderer.h" />
-    <ClInclude Include="Include\ZLua\Graphics\Shader.h" />
-    <ClInclude Include="Include\ZLua\Core\status.h" />
-    <ClInclude Include="Include\ZLua\Core\World.h" />
-    <ClInclude Include="Include\ZLua\ZLua.h" />
-    <ClInclude Include="Include\ZLua\Core\Mesh.h" />
-    <ClInclude Include="Include\ZLua\Core\Scene.h" />
-    <ClInclude Include="Include\ZLua\Core\vec2.h" />
-    <ClInclude Include="Include\ZLua\Graphics\Materials\Material.h" />
-    <ClInclude Include="Include\ZLua\Behaviours\ZWorldBehaviour.h" />
+    <ClInclude Include="Engine\ZLua\Core\GameObject.h" />
+    <ClInclude Include="Engine\ZLua\Core\Predefined_Meshes\Rectangle.h" />
+    <ClInclude Include="Engine\ZLua\Graphics\Materials\Colour.h" />
+    <ClInclude Include="Engine\ZLua\Graphics\Materials\Diffuse2D.h" />
+    <ClInclude Include="Engine\ZLua\Graphics\Materials\Textured2D.h" />
+    <ClInclude Include="Engine\ZLua\Graphics\Renderer.h" />
+    <ClInclude Include="Engine\ZLua\Graphics\Shader.h" />
+    <ClInclude Include="Engine\ZLua\Core\status.h" />
+    <ClInclude Include="Engine\ZLua\Core\World.h" />
+    <ClInclude Include="Engine\ZLua\ZLua.h" />
+    <ClInclude Include="Engine\ZLua\Core\Mesh.h" />
+    <ClInclude Include="Engine\ZLua\Core\Scene.h" />
+    <ClInclude Include="Engine\ZLua\Core\vec2.h" />
+    <ClInclude Include="Engine\ZLua\Graphics\Materials\Material.h" />
+    <ClInclude Include="Engine\ZLua\Behaviours\ZWorldBehaviour.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Game\Shaders\fragment.glsl" />
     <None Include="Game\Shaders\vertex.glsl" />
-    <None Include="Include\ZLua\Graphics\Materials\Shaders\Diffuse2D\fragment.glsl" />
-    <None Include="Include\ZLua\Graphics\Materials\Shaders\Diffuse2D\vertex.glsl" />
-    <None Include="Include\ZLua\Graphics\Materials\Shaders\Textured2D\fragment.glsl" />
-    <None Include="Include\ZLua\Graphics\Materials\Shaders\Textured2D\vertex.glsl" />
+    <None Include="Engine\ZLua\Graphics\Materials\Shaders\Diffuse2D\fragment.glsl" />
+    <None Include="Engine\ZLua\Graphics\Materials\Shaders\Diffuse2D\vertex.glsl" />
+    <None Include="Engine\ZLua\Graphics\Materials\Shaders\Textured2D\fragment.glsl" />
+    <None Include="Engine\ZLua\Graphics\Materials\Shaders\Textured2D\vertex.glsl" />
     <None Include="x64\Debug\Shaders\Diffuse2D\fragment.glsl" />
     <None Include="x64\Debug\Shaders\Diffuse2D\vertex.glsl" />
   </ItemGroup>
