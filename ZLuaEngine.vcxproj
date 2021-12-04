@@ -145,6 +145,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\ZLua\Behaviours\ZComponent.cpp" />
     <ClCompile Include="Engine\ZLua\Core\GameObject.cpp" />
     <ClCompile Include="Engine\ZLua\Graphics\Materials\Colour.cpp" />
     <ClCompile Include="Game\main.cpp" />
@@ -161,6 +162,7 @@
     <ClCompile Include="Engine\ZLua\Behaviours\ZWorldBehaviour.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\ZLua\Behaviours\ZComponent.h" />
     <ClInclude Include="Engine\ZLua\Core\GameObject.h" />
     <ClInclude Include="Engine\ZLua\Core\Predefined_Meshes\Rectangle.h" />
     <ClInclude Include="Engine\ZLua\Graphics\Materials\Colour.h" />

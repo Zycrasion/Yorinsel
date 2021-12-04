@@ -57,6 +57,9 @@
     <ClCompile Include="Engine\ZLua\Behaviours\ZWorldBehaviour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\ZLua\Behaviours\ZComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\ZLua\Core\World.h">
@@ -102,6 +105,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Engine\ZLua\Core\Predefined_Meshes\Rectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ZLua\Behaviours\ZComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

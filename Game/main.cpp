@@ -35,34 +35,44 @@ int main()
 		1,2,3
 	};
 
-
-	Textured2D one("./Game/Tex/container.jpg");
-	Diffuse2D two(0.5f, 0.5f, 1.0f);
-
-	Mesh Rectangle = *CreateRectangle(1.f, 1.f, &one);
-	GameObject Player = GameObject(Rectangle);
-
 	std::vector<vec2> Tri2 =
 
 	{
-		vec2(-1.0f,-1.0f),
-		vec2(1.0f,1.0f),
-		vec2(1.0f,-1.0f)
+		vec2(0.0f,0.0f),
+		vec2(0.5f,0.5f),
+		vec2(-0.5f,0.5f)
 	};
+
+	for (int i = 0; i < Tri2.size(); i++)
+	{
+		
+		Tri2[i].rotate(vec2(),45);
+		cout << Tri2[i].x << " " << Tri2[i].y << "\n";
+	}
 
 	std::vector<int> Tri2Indices =
 	{
 		0,1,2
 	};
 
-	//Mesh Triangle2(fromList(Tri2), Tri2Indices ,two);
+	/*for (int i = 0; i < Tri2.size(); i++)
+	{
+		Tri2[i].rotate(vec2(-0.5f,0.f), 90);
+	}*/
+	std::vector<float> E = fromList(Tri2,true);
 
-	std::vector<float> d = fromList(Tri2);
+	Textured2D one("./Game/Tex/container.jpg");
+	Diffuse2D two(0.5f, 0.5f, 1.0f);
+
+	Mesh Rectangle = *CreateRectangle(1.f, 1.f, &one);
+	Mesh* Tri2M = new Mesh(E,indices,&two);
+	GameObject Player = GameObject(Rectangle);
+	GameObject object = GameObject(*Tri2M);
 
 
 	Scene mainScene("MainScene", DebugMode, new Game());
 	mainScene.add(&Player);
-	//mainScene.add(Triangle2);
+	mainScene.add(&object);
 	game.setScene(mainScene);
 	game.init();
 	game.draw();
