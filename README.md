@@ -1,6 +1,4 @@
-# ZLuaEngine
-A CPP Game Engine
-This engine is actually called Zest just haven't renamed it yet.
-
-Current Working Commit:
-https://github.com/Zycrasion/ZLuaEngine/tree/9a185769444e4463d969f8283df55e3307ca39f9
+# Yorinsel
+A CPP Game Engine made with OpenGL and GLM.
+This game engine works now and this paticular commit is v0.0.1
+Im really tired so oof ):

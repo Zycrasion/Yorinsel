@@ -7,12 +7,18 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZLuaEngine", "ZLuaEngine.vc
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Build Library|x64 = Build Library|x64
+		Build Library|x86 = Build Library|x86
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9905686-9335-48B6-9786-7F82139C5C65}.Build Library|x64.ActiveCfg = Build Library|x64
+		{E9905686-9335-48B6-9786-7F82139C5C65}.Build Library|x64.Build.0 = Build Library|x64
+		{E9905686-9335-48B6-9786-7F82139C5C65}.Build Library|x86.ActiveCfg = Build Library|Win32
+		{E9905686-9335-48B6-9786-7F82139C5C65}.Build Library|x86.Build.0 = Build Library|Win32
 		{E9905686-9335-48B6-9786-7F82139C5C65}.Debug|x64.ActiveCfg = Debug|x64
 		{E9905686-9335-48B6-9786-7F82139C5C65}.Debug|x64.Build.0 = Debug|x64
 		{E9905686-9335-48B6-9786-7F82139C5C65}.Debug|x86.ActiveCfg = Debug|Win32

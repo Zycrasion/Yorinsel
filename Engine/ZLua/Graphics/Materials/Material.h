@@ -1,6 +1,9 @@
 #pragma once
 #include "Colour.h"
 #include "../Shader.h"
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 class Material
 {
@@ -15,6 +18,6 @@ public:
 	//void setTexture();
 	Colour getColour();
 	//void getTexture();
-	virtual void apply();
+	virtual void apply(glm::mat4 trans);
 };
 

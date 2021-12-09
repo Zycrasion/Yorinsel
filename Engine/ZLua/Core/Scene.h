@@ -13,8 +13,7 @@ class Scene
 public:
 	std::string sceneName;
 	bool DebugMode;
-	ZWorldBehaviour* behaviour;
-	Renderer frame;
+	ZWorldBehaviour *behaviour;
 	
 	std::vector<GameObject*> Objects;
 	//std::vector<Mesh*> Meshes;

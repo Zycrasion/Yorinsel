@@ -49,6 +49,6 @@ void vec2::rotate(const vec2& middle,float angle)
 {
 	float t_x = x;
 	float t_y = y;
-	x = cos(angle) * x - sin(angle) * y;
+	x = cos(angle) * t_x - sin(angle) * y;
 	y *= cos(angle);
 }

@@ -16,12 +16,13 @@ void Diffuse2D::init()
 	glEnableVertexAttribArray(0);
 }
 
-void Diffuse2D::apply()
+void Diffuse2D::apply(glm::mat4 trans)
 {
 	shader.use();
 	shader.setFloat("red", r);
 	shader.setFloat("blue", g);
 	shader.setFloat("green", b);
+	shader.setMat4("transform", trans);
 }
 
 //Diffuse2D::Diffuse2D()

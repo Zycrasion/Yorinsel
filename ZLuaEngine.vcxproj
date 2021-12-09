@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Build Library|Win32">
+      <Configuration>Build Library</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Build Library|x64">
+      <Configuration>Build Library</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
@@ -32,6 +40,12 @@
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Build Library|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
@@ -45,8 +59,14 @@
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Build Library|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -60,10 +80,16 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Build Library|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Build Library|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -73,6 +99,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Build Library|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
@@ -80,13 +109,33 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Include;C:\Users\Hendrix\Development\Zest\Include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Libs;$(LibraryPath)</LibraryPath>
+    <TargetName>Yorinsel</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Build Library|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Include;C:\Users\Hendrix\Development\Zest\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Libs;$(LibraryPath)</LibraryPath>
+    <TargetName>Yorinsel</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>C:\Users\Hendrix\Development\Zest\Engine;C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Hendrix\Development\CPP Librarys\OPENGL\Libs;$(LibraryPath)</LibraryPath>
+    <TargetName>Yorinsel</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Build Library|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
@@ -127,6 +176,19 @@
       <AdditionalDependencies>glfw3.lib;opengl32.lib;box2d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Build Library|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;box2d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -148,10 +210,8 @@
     <ClCompile Include="Engine\ZLua\Behaviours\ZComponent.cpp" />
     <ClCompile Include="Engine\ZLua\Core\GameObject.cpp" />
     <ClCompile Include="Engine\ZLua\Graphics\Materials\Colour.cpp" />
-    <ClCompile Include="Game\main.cpp" />
     <ClCompile Include="Engine\ZLua\Graphics\glad.c" />
     <ClCompile Include="Engine\ZLua\Graphics\Materials\Diffuse2D.cpp" />
-    <ClCompile Include="Engine\ZLua\Graphics\Renderer.cpp" />
     <ClCompile Include="Engine\ZLua\Graphics\Shader.cpp" />
     <ClCompile Include="Engine\ZLua\Core\World.cpp" />
     <ClCompile Include="Engine\ZLua\Core\Mesh.cpp" />
@@ -168,7 +228,6 @@
     <ClInclude Include="Engine\ZLua\Graphics\Materials\Colour.h" />
     <ClInclude Include="Engine\ZLua\Graphics\Materials\Diffuse2D.h" />
     <ClInclude Include="Engine\ZLua\Graphics\Materials\Textured2D.h" />
-    <ClInclude Include="Engine\ZLua\Graphics\Renderer.h" />
     <ClInclude Include="Engine\ZLua\Graphics\Shader.h" />
     <ClInclude Include="Engine\ZLua\Core\status.h" />
     <ClInclude Include="Engine\ZLua\Core\World.h" />
@@ -180,17 +239,12 @@
     <ClInclude Include="Engine\ZLua\Behaviours\ZWorldBehaviour.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Game\Shaders\fragment.glsl" />
-    <None Include="Game\Shaders\vertex.glsl" />
     <None Include="Engine\ZLua\Graphics\Materials\Shaders\Diffuse2D\fragment.glsl" />
     <None Include="Engine\ZLua\Graphics\Materials\Shaders\Diffuse2D\vertex.glsl" />
     <None Include="Engine\ZLua\Graphics\Materials\Shaders\Textured2D\fragment.glsl" />
     <None Include="Engine\ZLua\Graphics\Materials\Shaders\Textured2D\vertex.glsl" />
     <None Include="x64\Debug\Shaders\Diffuse2D\fragment.glsl" />
     <None Include="x64\Debug\Shaders\Diffuse2D\vertex.glsl" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Game\Tex\container.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

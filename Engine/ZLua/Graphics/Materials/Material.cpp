@@ -22,7 +22,7 @@ Colour Material::getColour()
 	return colour;
 }
 
-void Material::apply()
+void Material::apply(glm::mat4 trans)
 {
 	
 }

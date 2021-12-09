@@ -17,7 +17,6 @@
 #include  "./Core/Scene.h"
 #include  "./Core/World.h"
 #include "./Core/GameObject.h"
-#include "./Graphics/Renderer.h"
 #include "./Behaviours/ZWorldBehaviour.h"
 #include "Core/Predefined_Meshes/Rectangle.h"
 #endif

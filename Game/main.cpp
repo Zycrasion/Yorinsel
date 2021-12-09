@@ -1,17 +1,28 @@
 #include <ZLua/ZLua.h>
 bool DebugMode = true;
 
+
+
 class Game : public ZWorldBehaviour
 {
 public:
+	GameObject* object;
+	int i = 0;
 	void init()
 	{
 
 	}
 
-	void draw(Renderer currFrame)
+	void init(GameObject* obj)
 	{
-		
+		object = obj;
+	}
+
+	void draw()
+	{
+		//object->rotate(1.f);
+		object->setPosition(0.f, sin(glfwGetTime()));
+		i++;
 	}
 	void end()
 	{
@@ -43,12 +54,6 @@ int main()
 		vec2(-0.5f,0.5f)
 	};
 
-	for (int i = 0; i < Tri2.size(); i++)
-	{
-		
-		Tri2[i].rotate(vec2(),45);
-		cout << Tri2[i].x << " " << Tri2[i].y << "\n";
-	}
 
 	std::vector<int> Tri2Indices =
 	{
@@ -67,12 +72,12 @@ int main()
 	Mesh Rectangle = *CreateRectangle(1.f, 1.f, &one);
 	Mesh* Tri2M = new Mesh(E,indices,&two);
 	GameObject Player = GameObject(Rectangle);
-	GameObject object = GameObject(*Tri2M);
-
-
-	Scene mainScene("MainScene", DebugMode, new Game());
+	GameObject* object = new GameObject(*Tri2M);
+	Game* gameBehav = new Game();
+	gameBehav->init(object);
+	Scene mainScene("MainScene", DebugMode, gameBehav);
 	mainScene.add(&Player);
-	mainScene.add(&object);
+	mainScene.add(object);
 	game.setScene(mainScene);
 	game.init();
 	game.draw();

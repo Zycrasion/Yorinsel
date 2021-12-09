@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Game\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Engine\ZLua\Core\World.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -49,9 +46,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Engine\ZLua\Core\GameObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\ZLua\Graphics\Renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Engine\ZLua\Behaviours\ZWorldBehaviour.cpp">
@@ -98,9 +92,6 @@
     <ClInclude Include="Engine\ZLua\Core\GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\ZLua\Graphics\Renderer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\ZLua\Behaviours\ZWorldBehaviour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -112,18 +103,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Game\Shaders\vertex.glsl" />
-    <None Include="Game\Shaders\fragment.glsl" />
     <None Include="Engine\ZLua\Graphics\Materials\Shaders\Textured2D\vertex.glsl" />
     <None Include="Engine\ZLua\Graphics\Materials\Shaders\Textured2D\fragment.glsl" />
     <None Include="x64\Debug\Shaders\Diffuse2D\fragment.glsl" />
     <None Include="x64\Debug\Shaders\Diffuse2D\vertex.glsl" />
     <None Include="Engine\ZLua\Graphics\Materials\Shaders\Diffuse2D\fragment.glsl" />
     <None Include="Engine\ZLua\Graphics\Materials\Shaders\Diffuse2D\vertex.glsl" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Game\Tex\container.jpg">
-      <Filter>Resource Files</Filter>
-    </Image>
   </ItemGroup>
 </Project>

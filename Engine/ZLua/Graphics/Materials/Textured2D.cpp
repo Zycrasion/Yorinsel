@@ -52,9 +52,9 @@ void Textured2D::init()
 	
 }
 
-void Textured2D::apply()
+void Textured2D::apply(glm::mat4 trans)
 {
 	glBindTexture(GL_TEXTURE_2D, texture);
 	shader.use();
-
+	shader.setMat4("transform",trans);
 }
